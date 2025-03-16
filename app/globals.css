@@ -26,8 +26,8 @@ html.dark {
 }
 
 ::selection {
-  background-color: theme('colors.lime.500');
-  color: theme('colors.lime.950');
+  background-color: theme('colors.cyan.300');
+  color: theme('colors.cyan.950');
 }
 
 @keyframes typing-pulse {

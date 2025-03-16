@@ -2,7 +2,6 @@ import Link from 'next/link'
 import React from 'react'
 
 import { CursorClickIcon, UsersIcon } from '~/assets'
-import { PeekabooLink } from '~/components/links/PeekabooLink'
 import { Container } from '~/components/ui/Container'
 import { kvKeys } from '~/config/kv'
 import { navigationItems } from '~/config/nav'
@@ -20,7 +19,7 @@ function NavLink({
   return (
     <Link
       href={href}
-      className="transition hover:text-lime-500 dark:hover:text-lime-400"
+      className="transition hover:text-cyan-500 dark:hover:text-cyan-400"
     >
       {children}
     </Link>
@@ -44,7 +43,7 @@ async function TotalPageViews() {
   if (env.VERCEL_ENV === 'production') {
     views = await redis.incr(kvKeys.totalPageViews)
   } else {
-    views = 345678
+    views = 1433
   }
 
   return (
@@ -102,10 +101,7 @@ export function Footer() {
             <div className="mx-auto mb-8 max-w-md"></div>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <p className="text-sm text-zinc-500/80 dark:text-zinc-400/80">
-                &copy; {new Date().getFullYear()} Cali Castle. 网站已开源：
-                <PeekabooLink href="https://github.com/CaliCastle/cali.so">
-                  GitHub
-                </PeekabooLink>
+                &copy; {new Date().getFullYear()} Yinan Zhao
               </p>
               <Links />
             </div>

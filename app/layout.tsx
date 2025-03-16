@@ -3,7 +3,7 @@ import './prism.css'
 
 import type { Metadata, Viewport } from 'next'
 
-import { ThemeProvider } from '~/app/(main)/ThemeProvider'
+import { ThemeProvider } from '~/app/(main)/layoutComponents/ThemeProvider'
 import { url } from '~/lib'
 import { sansFont } from '~/lib/font'
 import { seo } from '~/lib/seo'
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: seo.title,
   },
   description: seo.description,
-  keywords: 'Cali,Cali Castle,郭晓楠,佐玩,创始人,CEO,开发者,设计师,细节控,创新',
+  keywords: 'Yinan,Yinan Zhao,赵一楠,开发者,创新',
   manifest: '/site.webmanifest',
   robots: {
     index: true,
@@ -31,20 +31,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: seo.title,
-      template: '%s | Cali Castle',
+      template: '%s | Yinan Zhao',
     },
     description: seo.description,
-    siteName: 'Cali Castle',
+    siteName: 'Yinan Zhao',
     locale: 'zh_CN',
     type: 'website',
-    url: 'https://cali.so',
-  },
-  twitter: {
-    site: '@thecalicastle',
-    creator: '@thecalicastle',
-    card: 'summary_large_image',
-    title: seo.title,
-    description: seo.description,
+    url: 'https://yinanzhao.com',
   },
   alternates: {
     canonical: url('/'),
