@@ -10,7 +10,7 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
-      url: url('/blog').href,
+      url: url('/articles').href,
       lastModified: new Date(),
     },
     {
@@ -18,7 +18,7 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
-      url: url('/guestbook').href,
+      url: url('/about').href,
       lastModified: new Date(),
     },
   ] satisfies MetadataRoute.Sitemap
@@ -26,7 +26,7 @@ export default async function sitemap() {
   const slugs = await getAllLatestBlogPostSlugs()
 
   const dynamicMap = slugs.map((slug) => ({
-    url: url(`/blog/${slug}`).href,
+    url: url(`/articles/${slug}`).href,
     lastModified: new Date(),
   })) satisfies MetadataRoute.Sitemap
 

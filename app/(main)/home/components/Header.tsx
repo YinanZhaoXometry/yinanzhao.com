@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Balancer from 'react-wrap-balancer'
 
 import { SparkleIcon } from '~/assets'
-import { PeekabooLink } from '~/components/links/PeekabooLink'
 import { SocialLink } from '~/components/links/SocialLink'
 
 function Developer() {
@@ -57,11 +56,17 @@ export function Header() {
         }}
       >
         <Balancer>
-          我是 Cali，
-          <PeekabooLink href="https://zolplay.com">佐玩</PeekabooLink>
-          创始人，目前带领着佐玩致力于创造一个充满创造力的工作环境，同时鼓励团队创造影响世界的产品。
-          我热爱开发，设计，创新，享受生活，以及在未知领域中探索。
+          {`I'm `}
+          <b>Yinan</b>
+          {`, a software developer based in Shenzhen China. I have 6 years of front-end web application work experience. And I'm proficient in: `}
         </Balancer>
+        <br />
+        <Balancer>
+          TypeScript&nbsp;&nbsp;|&nbsp;&nbsp;React.js&nbsp;&nbsp;|&nbsp;&nbsp;GraphQL&nbsp;&nbsp;|&nbsp;&nbsp;Ruby
+          on Rails&nbsp;&nbsp;|&nbsp;&nbsp;WeChat mini program development
+        </Balancer>
+        <br />
+        <Balancer>{``}</Balancer>
       </motion.p>
       <motion.div
         className="mt-6 flex gap-6"

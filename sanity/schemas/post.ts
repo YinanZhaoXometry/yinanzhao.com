@@ -1,7 +1,7 @@
 import { defineField, defineType } from 'sanity'
 import { z } from 'zod'
 
-import { PencilSwooshIcon } from '~/assets'
+import { IconPencilSwoosh } from '~/assets'
 import { readingTimeType } from '~/sanity/schemas/types/readingTime'
 
 export const Post = z.object({
@@ -39,7 +39,7 @@ export default defineType({
   name: 'post',
   title: '文章',
   type: 'document',
-  icon: PencilSwooshIcon,
+  icon: IconPencilSwoosh,
   fields: [
     defineField({
       name: 'title',

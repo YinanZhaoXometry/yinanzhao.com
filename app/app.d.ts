@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { type Component, type ReactNode } from 'react'
+import { type Component, type PropsWithChildren, type ReactNode } from 'react'
 
 type ReactJSXElementConstructor<Props> =
   | ((props: Props) => ReactNode | Promise<ReactNode>)
@@ -9,4 +9,10 @@ declare global {
   namespace React.JSX {
     type ElementType = string | ReactJSXElementConstructor<any>
   }
+}
+
+interface ContainerProps extends PropsWithChildren {
+  style?: React.CSSProperties
+  className?: string
+  onClick?: () => void
 }

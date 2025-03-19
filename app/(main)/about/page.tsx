@@ -1,9 +1,7 @@
-import { Container } from '~/components/ui/Container'
+import { Main } from '~/components/layout'
+
+import { Chat } from './components/Chat'
 
 export default function AboutPage() {
-  return (
-    <Container>
-      <h1 className="mt-10">给我点时间开发一下...</h1>
-    </Container>
-  )
+  return <Main headerTitle="About me">{<Chat />}</Main>
 }

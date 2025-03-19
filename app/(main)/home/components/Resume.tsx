@@ -16,7 +16,7 @@ export function Resume({ resume }: { resume: Resume[] }) {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-5 w-5 flex-none" />
-        <span className="ml-2">工作经历</span>
+        <span className="ml-2">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
@@ -32,18 +32,19 @@ export function Resume({ resume }: { resume: Resume[] }) {
               />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
-              <dt className="sr-only">公司</dt>
+              <dt className="sr-only">Company</dt>
               <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {role.company}
               </dd>
-              <dt className="sr-only">职位</dt>
+              <dt className="sr-only">Position</dt>
               <dd className="text-xs text-zinc-500 dark:text-zinc-400">
                 {role.title}
               </dd>
-              <dt className="sr-only">日期</dt>
+              <dt className="sr-only">Date</dt>
               <dd className="ml-auto text-xs text-zinc-500/80 dark:text-zinc-400/80">
-                {role.start}
-                <span aria-hidden="true">—</span> {role.end ?? '至今'}
+                {role.start}&nbsp;
+                <span aria-hidden="true">—</span>
+                &nbsp;{role.end ?? 'Present'}
               </dd>
             </dl>
           </li>

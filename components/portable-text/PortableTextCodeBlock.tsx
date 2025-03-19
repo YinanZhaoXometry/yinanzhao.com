@@ -6,7 +6,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 import { ClipboardCheckIcon, ClipboardDataIcon } from '~/assets'
 import { ClientOnly } from '~/components/ClientOnly'
-import { ElegantTooltip } from '~/components/ui/Tooltip'
+import { ElegantTooltip } from '~/components/UI/Tooltip'
 
 export function PortableTextCodeBlock({
   value,

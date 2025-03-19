@@ -7,7 +7,7 @@ import Link, { type LinkProps } from 'next/link'
 import React from 'react'
 
 import { RichLink } from '~/components/links/RichLink'
-import { HoverCard } from '~/components/ui/HoverCard'
+import { HoverCard } from '~/components/UI/HoverCard'
 import { env } from '~/env.mjs'
 import { makeBlurDataURL } from '~/lib/image'
 

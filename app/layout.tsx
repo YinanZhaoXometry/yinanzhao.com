@@ -3,9 +3,8 @@ import './prism.css'
 
 import type { Metadata, Viewport } from 'next'
 
-import { ThemeProvider } from '~/app/(main)/layoutComponents/ThemeProvider'
+import { ThemeProvider } from '~/components/layout'
 import { url } from '~/lib'
-import { sansFont } from '~/lib/font'
 import { seo } from '~/lib/seo'
 
 export const metadata: Metadata = {
@@ -61,8 +60,8 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="zh-CN"
-      className={`${sansFont.variable} m-0 h-full p-0 font-sans antialiased`}
+      lang="en"
+      className={`m-0 h-full p-0 antialiased`}
       suppressHydrationWarning
     >
       <body className="flex h-full flex-col">

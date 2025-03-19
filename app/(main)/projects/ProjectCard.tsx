@@ -10,7 +10,7 @@ import Image from 'next/image'
 import React from 'react'
 
 import { ExternalLinkIcon } from '~/assets'
-import { Card } from '~/components/ui/Card'
+import { Card } from '~/components/UI/Card'
 import { urlForImage } from '~/sanity/lib/image'
 import { type Project } from '~/sanity/schemas/project'
 
@@ -56,7 +56,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </Card.Link>
       </h2>
       <Card.Description>{description}</Card.Description>
-      <p className="pointer-events-none relative z-40 mt-6 flex items-center text-sm font-medium text-zinc-400 transition group-hover:-translate-y-0.5 group-hover:text-cyan-600 dark:text-zinc-200 dark:group-hover:text-cyan-400">
+      <p className="pointer-events-none relative z-40 mt-6 flex items-center text-sm font-medium text-zinc-400 transition group-hover:-translate-y-0.5 group-hover:text-blue-600 dark:text-zinc-200 dark:group-hover:text-blue-400">
         <span className="mr-2">{new URL(url).host}</span>
         <ExternalLinkIcon className="h-4 w-4 flex-none" />
       </p>

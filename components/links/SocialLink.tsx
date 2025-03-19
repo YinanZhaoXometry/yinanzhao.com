@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import React, { type FC, useMemo } from 'react'
 
-import { Tooltip } from '~/components/ui/Tooltip'
+import { Tooltip } from '~/components/UI/Tooltip'
 
 import {
   getSocialConfigByPlatform,

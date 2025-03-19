@@ -35,11 +35,19 @@ type ElegantTooltipProps = {
   children: React.ReactNode
   content: React.ReactNode
 }
-export function ElegantTooltip({ children, content }: ElegantTooltipProps) {
+export function ElegantTooltip({
+  children,
+  content,
+  delayDuration,
+}: ElegantTooltipProps &
+  Pick<TooltipPrimitive.TooltipProviderProps, 'delayDuration'>) {
   const [open, setOpen] = React.useState(false)
 
   return (
-    <Tooltip.Provider disableHoverableContent delayDuration={0.2}>
+    <Tooltip.Provider
+      disableHoverableContent
+      delayDuration={delayDuration || 1000}
+    >
       <Tooltip.Root open={open} onOpenChange={setOpen}>
         <Tooltip.Trigger asChild>{children}</Tooltip.Trigger>
         <AnimatePresence>

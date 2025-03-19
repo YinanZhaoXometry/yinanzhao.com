@@ -370,7 +370,7 @@ module.exports = {
       },
 
       fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
+        sans: fontFamily.sans,
       },
 
       animation: {

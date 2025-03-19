@@ -45,6 +45,10 @@ const config = {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'warn',
     'unused-imports/no-unused-imports': 'error',
+    'react-hooks/exhaustive-deps': [
+      'error',
+      { enableDangerousAutofixThisMayCauseInfiniteLoops: true },
+    ],
   },
 }
 

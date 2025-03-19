@@ -20,7 +20,7 @@ export const regexStrToSocialConfigMapper: { [key: string]: SocialConfig } = {
   '(?:mailto:)': {
     icon: MailIcon,
     platform: 'mail',
-    label: '邮箱地址',
+    label: 'Email',
     iconType: 'stroke',
   },
   '(?:linkedin.com:)': {

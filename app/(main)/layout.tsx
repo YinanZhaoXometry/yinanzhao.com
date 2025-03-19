@@ -1,14 +1,12 @@
-import './blog/[slug]/blog.css'
+import './articles/[slug]/Article.css'
 
 import { Analytics } from '@vercel/analytics/react'
 import { Suspense } from 'react'
 
-import { Footer } from '~/app/(main)/layoutComponents/Footer'
 import { QueryProvider } from '~/app/QueryProvider'
+import { Footer, Header } from '~/components/layout'
 
-import { Header } from './layoutComponents/Header'
-
-export default function BlogLayout({
+export default function AppMainLayout({
   children,
 }: {
   children: React.ReactNode
