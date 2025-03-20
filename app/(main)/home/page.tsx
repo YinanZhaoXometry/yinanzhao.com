@@ -7,7 +7,8 @@ import { IconPencilSwoosh } from '~/assets'
 import { Container } from '~/components/UI/Container'
 import { getSettings } from '~/sanity/queries'
 
-import { Articles } from '../articles/components/Articles'
+import { Articles } from './components/Articles'
+
 export const revalidate = 60
 
 export default async function HomePage() {

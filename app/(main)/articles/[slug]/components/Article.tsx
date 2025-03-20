@@ -21,7 +21,7 @@ import { Container } from '~/components/UI/Container'
 import { prettifyNumber } from '~/lib/math'
 import { type PostDetail } from '~/sanity/schemas/post'
 
-import { ArticleCard } from '../../components/ArticleCard'
+import { ArticleCard } from '../../components/ArticleCard1'
 import { ArticleReactions } from './ArticleReactions'
 import { ArticleTableOfContents } from './ArticleTableOfContents'
 

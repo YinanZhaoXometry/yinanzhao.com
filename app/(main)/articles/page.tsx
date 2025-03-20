@@ -21,11 +21,10 @@ export const metadata = {
 export default function ArticlesPage() {
   return (
     <Main
-      className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8"
       headerTitle="Writing on software design, productivity and more."
       headerDescription="All of my long-form thoughts on programming, productivity and more, collected in chronological order."
     >
-      {<Articles limit={20} />}
+      <Articles limit={20} />
     </Main>
   )
 }
