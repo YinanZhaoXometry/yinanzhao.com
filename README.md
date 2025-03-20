@@ -1,33 +1,33 @@
-## Yinan 个人博客网站
+# Yinan’s Personal Website
 
-Yinan 的个人网站 [https://yinanzhao.com/](https://yinanzhao.com/) 的源代码。
+The source code for Yinan’s personal website, https://yinanzhao.com/.
 
-需要其他服务商的环境变量才能正常运行，所以如果你想要在本地运行，需要自己配置。
+To run it properly, you’ll need environment variables from other service providers, so if you want to run it locally, you’ll need to set them up yourself.
 
-可查看 `.env.example` 文件，里面包含了所有需要的环境变量。
+Check out the `.env.example` file—it lists all the required environment variables.
 
-### 技术栈
+## Tech Stack
 
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [Radix UI](https://www.radix-ui.com/)
-- [Drizzle ORM](https://orm.drizzle.team/)
-- [Sanity](https://www.sanity.io/)
-- [React Email](https://react.email)
-- [Resend](https://resend.com/)
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Radix UI
+- Drizzle ORM
+- Sanity
+- React Email
+- Resend
 
-### 本地开发
+## Local Development
 
 ```bash
-# 安装依赖
+# Install dependencies
 pnpm install
 
-# 启动开发服务器
+# Start the development server
 pnpm dev
 
-# 构建
+# Build
 pnpm build
 ```
