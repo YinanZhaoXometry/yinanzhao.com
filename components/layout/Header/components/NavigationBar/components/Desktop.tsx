@@ -10,6 +10,7 @@ export function Desktop({ ...props }: React.HTMLAttributes<HTMLDivElement>) {
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
   const radius = useMotionValue(0)
+
   const handleMouseMove = React.useCallback(
     ({ clientX, clientY, currentTarget }: React.MouseEvent) => {
       const bounds = currentTarget.getBoundingClientRect()
