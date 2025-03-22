@@ -13,6 +13,7 @@ export const Project = z.object({
     asset: z.any(),
   }),
 })
+
 export type Project = z.infer<typeof Project>
 
 export default defineType({

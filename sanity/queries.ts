@@ -118,6 +118,7 @@ export const getSettingsQuery = () =>
       "logo": logo.asset->url
     }
 }`
+
 export const getSettings = () =>
   client.fetch<{
     projects: Project[] | null
