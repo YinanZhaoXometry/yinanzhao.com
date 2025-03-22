@@ -1,33 +1,78 @@
-# Yinan’s Personal Website
+# Yinan’s Portfolio Site
 
-The source code for Yinan’s personal website, https://yinanzhao.com/.
+The source code for Yinan’s Portfolio site: https://yinanzhao.com/.
 
-To run it properly, you’ll need environment variables from other service providers, so if you want to run it locally, you’ll need to set them up yourself.
+## Project Features
 
-Check out the `.env.example` file—it lists all the required environment variables.
+- 💻 Modern user interface design
+- ⚡ Fast loading speeds and responsive design
+- 🪄 Light/Dark mode and smooth animation and transitions
+- 💾 Utilized serverless backend services such as Snity and Upstash
 
 ## Tech Stack
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Radix UI
-- Drizzle ORM
-- Sanity
-- React Email
-- Resend
+### Frontend
+
+- **Next.js**: A React framework for building modern server-rendered applications
+- **Tailwind CSS**: A utility-first CSS framework for styling
+- **Framer Motion**: A React motion library that simplifies creating smooth animations
+- **Radix UI**: A React component library optimized for fast development and building high-quality modern web interfaces
+- **Sanity**: A fully customizable all-code backend for content-driven websites and apps.
+
+### Backend
+
+- **Next.js API Routes**: Server-side API implementation
+- **Upstash**: Serverless data platform, offering low-latency, scalable databases like Redis
+
+### Deployment and Infrastructure
+
+- **Vercel**: Application hosting and automated deployment
+- **Sanity**: Content management system
+- **Upstash**: Track total visits and article view statistics.
 
 ## Local Development
 
-```bash
-# Install dependencies
-pnpm install
+1. Install dependencies
 
-# Start the development server
-pnpm dev
+   ```bash
+   # Install dependencies
+   pnpm install
+   ```
 
-# Build
-pnpm build
-```
+2. Configure environment variables
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   Then edit the `.env` file and fill in the necessary environment variables:
+
+   - `NEXT_PUBLIC_APP_URL`: Application URL
+   - `NEXT_PUBLIC_SANITY_DATASET`: Sanity CMS Dataset name
+   - `NEXT_PUBLIC_SANITY_PROJECT_ID`: Sanity CMS project ID
+   - `UPSTASH_REDIS_REST_TOKEN`: Upstash Reids REST API token
+   - `UPSTASH_REDIS_REST_URL`: Upstash Reids REST API URL
+
+3. Initialize the Sanity CMS admin folder
+
+   ```bash
+   npm create sanity@latest -- --template clean --create-project "Your-Project-Name" --dataset production
+   ```
+
+4. Start the development server
+
+   ```bash
+   pnpm dev
+   ```
+
+   Visit http://localhost:3000 to view the application.
+
+## Deployment
+
+This project is pre-configured for direct deployment to the Vercel platform.
+
+1. Fork this project to your GitHub account
+2. Import the project in Vercel
+3. Configure the necessary environment variables:
+   - `NEXT_PUBLIC_APP_URL`: Your Vercel deployment URL (e.g., https://your-app.vercel.app)
+4. Once deployed, the app will be accessible
