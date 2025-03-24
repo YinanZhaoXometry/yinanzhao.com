@@ -1,9 +1,9 @@
-import { getLatestBlogPosts } from '~/sanity/queries'
+import { fetchLatestBlogPosts } from '~/sanity/queries'
 
 import { ArticleCard } from './ArticleCard'
 
-export async function Articles({ limit = 5 }) {
-  const posts = (await getLatestBlogPosts({ limit, forDisplay: true })) || []
+export async function Articles({ limit = 3 }) {
+  const posts = (await fetchLatestBlogPosts({ limit, forDisplay: true })) || []
 
   return (
     <div className="flex flex-col gap-16">

@@ -1,28 +1,19 @@
-'use client'
-
-import './Chat.css'
-
-import { clsxm } from '@zolplay/utils'
 import anime from 'animejs'
-import React, { type FC, useCallback } from 'react'
+import { useCallback } from 'react'
 
-import { useMount } from '~/app/hooks/useMount'
-
-import { MESSAGES } from './Chat.constants'
+import { MESSAGES } from '../Greetings.constants'
 import {
   calcMessageLoadingSpeed,
   createBubbleElements,
   getDimentions,
   getMessagesElement,
-} from './Chat.helpers'
-import styles from './Chat.module.css'
+} from '../Greetings.helpers'
+import { usePlayingStatuses } from './usePlayingStatuses'
 
 let messageIndex = 0
 
-interface ChatProps {}
-
-export const Chat: FC<ChatProps> = (props) => {
-  const {} = props
+export function useSendMessages() {
+  const { playingStatuses, changePlayingStatuses } = usePlayingStatuses()
 
   const sendMessage = useCallback(
     (
@@ -144,6 +135,10 @@ export const Chat: FC<ChatProps> = (props) => {
   const sendMessages = useCallback(() => {
     const message = MESSAGES[messageIndex]
 
+    if (messageIndex === MESSAGES.length) {
+      changePlayingStatuses({ isDone: true, isPlaying: false })
+    }
+
     if (!message) {
       return
     }
@@ -155,21 +150,28 @@ export const Chat: FC<ChatProps> = (props) => {
       sendMessages,
       calcMessageLoadingSpeed(message, anime.random(900, 1200))
     )
-  }, [sendMessage])
+  }, [sendMessage, changePlayingStatuses])
 
-  useMount(() => {
+  const resetMessages = useCallback(() => {
+    messageIndex = 0
+    getMessagesElement().innerHTML = ''
+  }, [])
+
+  const startSendingMessages = useCallback(() => {
+    if (playingStatuses.isDone) {
+      resetMessages()
+    }
+    changePlayingStatuses({ isPlaying: true })
     sendMessages()
-  })
+  }, [
+    changePlayingStatuses,
+    playingStatuses.isDone,
+    resetMessages,
+    sendMessages,
+  ])
 
-  return (
-    <div className={styles.chat}>
-      <div
-        className={clsxm(
-          styles.chatMessages,
-          'chatMessages',
-          'px-2 py-2 sm:px-20 sm:py-20'
-        )}
-      ></div>
-    </div>
-  )
+  return {
+    sendingMessageStatuses: playingStatuses,
+    startSendingMessages,
+  }
 }

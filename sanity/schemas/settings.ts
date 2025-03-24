@@ -40,12 +40,6 @@ export default defineType({
               validation: (Rule) => Rule.required(),
             }),
             defineField({
-              name: 'title',
-              title: '职位',
-              type: 'string',
-              validation: (Rule) => Rule.required(),
-            }),
-            defineField({
               name: 'logo',
               title: '公司 Logo',
               description: '建议尺寸 100x100px 正方形裁切',
@@ -53,6 +47,12 @@ export default defineType({
               options: {
                 hotspot: true,
               },
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: 'title',
+              title: '职位',
+              type: 'string',
               validation: (Rule) => Rule.required(),
             }),
             defineField({
@@ -65,6 +65,12 @@ export default defineType({
               name: 'end',
               title: '结束时间（留空会显示“至今”）',
               type: 'string',
+            }),
+            defineField({
+              name: 'descriptions',
+              title: '描述',
+              type: 'array',
+              of: [{ type: 'string' }],
             }),
           ],
           preview: {

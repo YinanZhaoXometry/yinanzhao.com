@@ -1,8 +1,9 @@
-import { LOADING_TEXT, TYPING_SPEED } from './Chat.constants'
+import { LOADING_TEXT, TYPING_SPEED } from './Greetings.constants'
 
 type Elements = ReturnType<typeof createBubbleElements>
 
-export const getMessagesElement = () => document.querySelector('.chatMessages')
+export const getMessagesElement = () =>
+  document.querySelector('.greetingsMessages')
 
 export const getCurrentTime = function () {
   const date = new Date()

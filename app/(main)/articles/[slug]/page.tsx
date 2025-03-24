@@ -5,7 +5,7 @@ import { kvKeys } from '~/config/kv'
 import { env } from '~/env.mjs'
 import { url } from '~/lib'
 import { redis } from '~/lib/redis'
-import { getBlogPost } from '~/sanity/queries'
+import { fetchBlogPost } from '~/sanity/queries'
 
 import { Article } from './components/Article'
 
@@ -14,7 +14,7 @@ export const generateMetadata = async ({
 }: {
   params: { slug: string }
 }) => {
-  const post = await getBlogPost(params.slug)
+  const post = await fetchBlogPost(params.slug)
   if (!post) {
     notFound()
   }
@@ -54,7 +54,7 @@ export default async function BlogPage({
 }: {
   params: { slug: string }
 }) {
-  const post = await getBlogPost(params.slug)
+  const post = await fetchBlogPost(params.slug)
   if (!post) {
     notFound()
   }

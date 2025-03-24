@@ -23,9 +23,9 @@ export default function AppMainLayout({
       </div>
 
       <QueryProvider>
-        <div className="relative text-zinc-800 dark:text-zinc-200">
+        <div className="relative flex flex-1 flex-col text-zinc-800 dark:text-zinc-200">
           <Header />
-          <main>{children}</main>
+          <main className="mb-32">{children}</main>
           <Suspense>
             <Footer />
           </Suspense>

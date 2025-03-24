@@ -2,17 +2,17 @@ import React from 'react'
 
 import { Header } from '~/app/(main)/home/components/Header'
 import { Photos } from '~/app/(main)/home/components/Photos'
-import { Resume } from '~/app/(main)/home/components/Resume'
 import { IconPencilSwoosh } from '~/assets'
+import { Resume } from '~/components/Resume'
 import { Container } from '~/components/UI/Container'
-import { getSettings } from '~/sanity/queries'
+import { fetchSettings } from '~/sanity/queries'
 
 import { Articles } from './components/Articles'
 
 export const revalidate = 60
 
 export default async function HomePage() {
-  const settings = await getSettings()
+  const settings = await fetchSettings()
 
   return (
     <>
@@ -32,7 +32,7 @@ export default async function HomePage() {
             <Articles />
           </div>
           <aside className="space-y-10 lg:sticky lg:top-8 lg:h-fit lg:pl-16 xl:pl-20">
-            {settings?.resume && <Resume resume={settings.resume} />}
+            <Resume resumes={settings.resume} />
           </aside>
         </div>
       </Container>

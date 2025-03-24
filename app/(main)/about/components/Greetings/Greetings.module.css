@@ -1,0 +1,71 @@
+.greetings {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border-color: rgb(244 244 245 / 1);
+  border-width: 1px;
+  min-height: 320px;
+}
+
+@media (width >= 64rem) {
+  .greetings {
+    width: 430px;
+    height: 880px;
+    padding: 0 20px;
+    padding-top: calc(18px + 54px);
+    padding-bottom: calc(20px + 21px);
+    border: none;
+    margin-left: auto;
+  }
+}
+
+.greetingsMessagesContainer *,
+.greetingsMessagesContainer *:before,
+.greetingsMessagesContainer *:after {
+  box-sizing: border-box;
+}
+
+.greetingsMessagesContainer {
+  font-size: 1.125rem;
+  --bg0: #fff;
+  --bg1: rgba(206, 206, 206, 0.5);
+  --fg0: #000;
+  --fg1: rgba(0, 0, 0, 0.5);
+  --a0: #0076ff;
+
+  background: var(--bg0);
+  color: var(--fg0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.greetingsMessages {
+  overflow: auto;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+@media (width >= 64rem) {
+  .greetingsMessages {
+    padding: 24px;
+  }
+}
+
+.greetingsMessagesIPhoneMock {
+  width: 430px;
+  height: auto;
+}
+
+@media (width >= 64rem) {
+  .greetingsPlayButton {
+    width: 430px;
+    margin-left: auto;
+    border-radius: 50px;
+  }
+}

@@ -1,8 +1,8 @@
 import { ProjectCard } from '~/app/(main)/projects/ProjectCard'
-import { getSettings } from '~/sanity/queries'
+import { fetchSettings } from '~/sanity/queries'
 
 export async function Projects() {
-  const projects = (await getSettings())?.projects || []
+  const projects = (await fetchSettings())?.projects || []
 
   return (
     <ul

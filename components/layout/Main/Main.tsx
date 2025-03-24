@@ -1,6 +1,5 @@
 import { clsxm } from '@zolplay/utils'
 import React, { type FC, type ReactNode } from 'react'
-import Balancer from 'react-wrap-balancer'
 
 import { type ContainerProps } from '~/app/app'
 import { Container } from '~/components/UI'
@@ -21,7 +20,7 @@ export const Main: FC<MainProps> = (props) => {
         </h1>
         {headerDescription && (
           <p className="my-6 text-base text-zinc-600 dark:text-zinc-400">
-            <Balancer>{headerDescription}</Balancer>
+            {headerDescription}
           </p>
         )}
       </header>
