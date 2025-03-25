@@ -1,4 +1,5 @@
 import './Spinner.types'
+import './Spinner.css'
 
 import React, { type FunctionComponent, useMemo } from 'react'
 
@@ -8,8 +9,7 @@ import {
   OPACITY_LEVELS,
   POINTS,
 } from './Spinner.constants'
-import './Spinner.css'
-import { SpinnerProps } from './Spinner.types'
+import { type SpinnerProps } from './Spinner.types'
 export const Spinner: FunctionComponent<SpinnerProps> = (
   props
 ): React.ReactElement | null => {

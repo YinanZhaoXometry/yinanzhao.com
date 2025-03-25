@@ -4,7 +4,7 @@ import { clsxm } from '@zolplay/utils'
 import { motion } from 'framer-motion'
 import { type CSSProperties, useRef } from 'react'
 
-import { Container } from '~/components/UI'
+import { Container } from '~/components/ui'
 
 import { AvatarHomePage } from './components/AvatarHomePage'
 import { AvatarOtherPages } from './components/AvatarOtherPages'

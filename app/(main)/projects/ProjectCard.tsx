@@ -10,7 +10,7 @@ import Image from 'next/image'
 import React from 'react'
 
 import { ExternalLinkIcon } from '~/assets'
-import { Card } from '~/components/UI/Card'
+import { Card } from '~/components/ui/Card'
 import { urlForImage } from '~/sanity/lib/image'
 import { type Project } from '~/sanity/schemas/project'
 

@@ -2,7 +2,7 @@ import { clsxm } from '@zolplay/utils'
 import React, { type FC, type ReactNode } from 'react'
 
 import { type ContainerProps } from '~/app/app'
-import { Container } from '~/components/UI'
+import { Container } from '~/components/ui'
 
 interface MainProps extends ContainerProps {
   headerTitle: ReactNode

@@ -1,5 +1,5 @@
 import { UFOIcon } from '~/assets'
-import { Container } from '~/components/UI/Container'
+import { Container } from '~/components/ui/Container'
 
 export default function PageSkeleton() {
   return (

@@ -5,7 +5,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { IconMoon, IconSun } from '~/assets'
 import { IconDevice } from '~/assets/icons/IconDevice'
-import { ElegantTooltip } from '~/components/UI/Tooltip'
+import { ElegantTooltip } from '~/components/ui/Tooltip'
 
 const themes = [
   {

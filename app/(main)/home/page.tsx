@@ -4,7 +4,7 @@ import { Header } from '~/app/(main)/home/components/Header'
 import { Photos } from '~/app/(main)/home/components/Photos'
 import { IconPencilSwoosh } from '~/assets'
 import { Resume } from '~/components/Resume'
-import { Container } from '~/components/UI/Container'
+import { Container } from '~/components/ui/Container'
 import { fetchSettings } from '~/sanity/queries'
 
 import { Articles } from './components/Articles'

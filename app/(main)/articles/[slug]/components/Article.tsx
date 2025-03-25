@@ -16,8 +16,8 @@ import {
 } from '~/assets'
 import { PostPortableText } from '~/components/PostPortableText'
 import { Prose } from '~/components/Prose'
-import { Button } from '~/components/UI/Button'
-import { Container } from '~/components/UI/Container'
+import { Button } from '~/components/ui/Button'
+import { Container } from '~/components/ui/Container'
 import { prettifyNumber } from '~/lib/math'
 import { type PostDetail } from '~/sanity/schemas/post'
 

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import { UsersIcon } from '~/assets'
-import { Container } from '~/components/UI/Container'
+import { Container } from '~/components/ui/Container'
 import { kvKeys } from '~/config/kv'
 import { navigationItems } from '~/config/nav'
 import { env } from '~/env.mjs'

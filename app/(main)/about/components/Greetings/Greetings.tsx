@@ -6,7 +6,7 @@ import Image from 'next/image'
 import React, { type FC } from 'react'
 
 import { useMount } from '~/app/hooks/useMount'
-import { Button, Spinner } from '~/components/UI'
+import { Button, Spinner } from '~/components/ui'
 import { cn } from '~/utils/cn'
 
 import ImageIphone from '../../images/image-iphone.png'
