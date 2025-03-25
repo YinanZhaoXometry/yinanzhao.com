@@ -10,8 +10,6 @@ const server = z.object({
     .default('development'),
   UPSTASH_REDIS_REST_URL: z.string().min(1),
   UPSTASH_REDIS_REST_TOKEN: z.string().min(1),
-  LINK_PREVIEW_API_BASE_URL: z.string().optional(),
-  SITE_NOTIFICATION_EMAIL_TO: z.string().optional(),
 })
 
 const client = z.object({
@@ -19,7 +17,6 @@ const client = z.object({
   NEXT_PUBLIC_SANITY_DATASET: z.string().min(1),
   NEXT_PUBLIC_SANITY_USE_CDN: z.boolean(),
   NEXT_PUBLIC_SITE_URL: z.string().min(1),
-  NEXT_PUBLIC_SITE_LINK_PREVIEW_ENABLED: z.boolean().optional().default(false),
 })
 
 /**
@@ -30,7 +27,6 @@ const client = z.object({
  */
 const processEnv = {
   NODE_ENV: process.env.NODE_ENV,
-  RESEND_API_KEY: process.env.RESEND_API_KEY,
   VERCEL_ENV: process.env.VERCEL_ENV,
   UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
   UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
@@ -38,10 +34,6 @@ const processEnv = {
   NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
   NEXT_PUBLIC_SANITY_USE_CDN: process.env.NEXT_PUBLIC_SANITY_USE_CDN == 'true',
   NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
-  NEXT_PUBLIC_SITE_LINK_PREVIEW_ENABLED:
-    process.env.NEXT_PUBLIC_SITE_LINK_PREVIEW_ENABLED == 'true',
-  LINK_PREVIEW_API_BASE_URL: process.env.LINK_PREVIEW_API_BASE_URL,
-  SITE_NOTIFICATION_EMAIL_TO: process.env.SITE_NOTIFICATION_EMAIL_TO,
 }
 
 // Don't touch the part below
