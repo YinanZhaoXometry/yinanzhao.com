@@ -22,7 +22,7 @@ export function DesktopNavItem({
             ? 'text-teal-500 dark:text-teal-400'
             : 'hover:text-teal-500 dark:hover:text-teal-400'
         )}
-        prefetch={true}
+        prefetch={false}
       >
         {children}
 
