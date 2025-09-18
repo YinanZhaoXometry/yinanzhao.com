@@ -57,13 +57,14 @@ export function Header() {
       >
         <Balancer>
           {`I'm `}
-          <b>Yinan</b>
-          {`, a software developer based in Shenzhen China. I have 6 years of front-end web application work experience. And I'm proficient in: `}
+          <b>Yinan</b> Zhao
+          {`, a software developer based in Shenzhen China. I have 7 years of web application deveopment experience. And I'm proficient in: `}
         </Balancer>
         <br />
         <Balancer>
-          TypeScript&nbsp;&nbsp;|&nbsp;&nbsp;React.js&nbsp;&nbsp;|&nbsp;&nbsp;GraphQL&nbsp;&nbsp;|&nbsp;&nbsp;Ruby
-          on Rails&nbsp;&nbsp;|&nbsp;&nbsp;WeChat mini program development
+          React.js&nbsp;&nbsp;| Next.js&nbsp;&nbsp;|
+          TypeScript&nbsp;&nbsp;|&nbsp;&nbsp;GraphQL&nbsp;&nbsp;|&nbsp;&nbsp;Java&nbsp;&nbsp;|&nbsp;&nbsp;WeChat
+          mini program development
         </Balancer>
         <br />
         <Balancer>{``}</Balancer>
@@ -84,16 +85,6 @@ export function Header() {
           href="https://github.com/YinanZhaoXometry"
           aria-label="My GitHub"
           platform="github"
-        />
-        <SocialLink
-          href="https://www.linkedin.com/in/zhaoyn/"
-          aria-label="My Linkedin"
-          platform="linkedin"
-        />
-        <SocialLink
-          href="mailto:onezhaoyn@gmail.com"
-          aria-label="My Email"
-          platform="mail"
         />
       </motion.div>
     </div>
