@@ -27,7 +27,7 @@ const nextConfig = {
   },
 
   rewrites() {
-    return []
+    return [{ source: '/', destination: '/home' }]
   },
 }
 

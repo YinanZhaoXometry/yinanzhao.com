@@ -1,10 +1,9 @@
 import { type Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import { kvKeys } from '~/config/kv'
 import { env } from '~/env.mjs'
 import { url } from '~/lib'
-import { redis } from '~/lib/redis'
+// import { redis } from '~/lib/redis'
 import { fetchBlogPost } from '~/sanity/queries'
 
 import { Article } from './components/Article'
@@ -61,9 +60,9 @@ export default async function BlogPage({
 
   let views: number
   if (env.VERCEL_ENV === 'production') {
-    views = await redis.incr(kvKeys.postViews(post._id))
+    // views = await redis.incr(kvKeys.postViews(post._id))
   } else {
-    views = 30578
+    views = 578
   }
 
   let reactions: number[] = []
@@ -79,9 +78,7 @@ export default async function BlogPage({
         reactions = data
       }
     } else {
-      reactions = Array.from({ length: 4 }, () =>
-        Math.floor(Math.random() * 50000)
-      )
+      reactions = Array.from({ length: 4 }, () => 0)
     }
   } catch (error) {
     console.error(error)
@@ -92,8 +89,8 @@ export default async function BlogPage({
     if (env.VERCEL_ENV === 'development') {
       relatedViews = post.related.map(() => Math.floor(Math.random() * 1000))
     } else {
-      const postIdKeys = post.related.map(({ _id }) => kvKeys.postViews(_id))
-      relatedViews = await redis.mget<number[]>(...postIdKeys)
+      // const postIdKeys = post.related.map(({ _id }) => kvKeys.postViews(_id))
+      // relatedViews = await redis.mget<number[]>(...postIdKeys)
     }
   }
 

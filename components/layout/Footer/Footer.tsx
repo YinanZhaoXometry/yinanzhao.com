@@ -3,11 +3,9 @@ import React from 'react'
 
 import { UsersIcon } from '~/assets'
 import { Container } from '~/components/ui/Container'
-import { kvKeys } from '~/config/kv'
 import { navigationItems } from '~/config/nav'
 import { env } from '~/env.mjs'
 import { prettifyNumber } from '~/lib/math'
-import { redis } from '~/lib/redis'
 
 import { LastVisitorInfo } from './LastVisitorInfo'
 
@@ -40,10 +38,10 @@ function Links() {
   )
 }
 
-async function TotalPageViews() {
+function TotalPageViews() {
   let views: number
   if (env.VERCEL_ENV === 'production') {
-    views = await redis.incr(kvKeys.totalPageViews)
+    // views = await redis.incr(kvKeys.totalPageViews)
   } else {
     views = 836
   }

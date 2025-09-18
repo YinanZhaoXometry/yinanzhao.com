@@ -1,7 +1,4 @@
 import { CursorClickIcon } from '~/assets'
-import { kvKeys } from '~/config/kv'
-import { env } from '~/env.mjs'
-import { redis } from '~/lib/redis'
 
 type VisitorGeolocation = {
   country: string
@@ -9,16 +6,16 @@ type VisitorGeolocation = {
   flag: string
 }
 
-export async function LastVisitorInfo() {
+export function LastVisitorInfo() {
   let lastVisitor: VisitorGeolocation | undefined = undefined
-  if (env.VERCEL_ENV === 'production') {
-    const [lv, cv] = await redis.mget<VisitorGeolocation[]>(
-      kvKeys.lastVisitor,
-      kvKeys.currentVisitor
-    )
-    lastVisitor = lv
-    await redis.set(kvKeys.lastVisitor, cv)
-  }
+  // if (env.VERCEL_ENV === 'production') {
+  //   const [lv, cv] = await redis.mget<VisitorGeolocation[]>(
+  //     kvKeys.lastVisitor,
+  //     kvKeys.currentVisitor
+  //   )
+  //   lastVisitor = lv
+  //   await redis.set(kvKeys.lastVisitor, cv)
+  // }
 
   if (!lastVisitor) {
     lastVisitor = {

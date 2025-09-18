@@ -140,7 +140,7 @@ function ReactIcon({
         unoptimized
       />
       <span className="absolute -bottom-6 left-0 flex w-full items-center justify-center whitespace-nowrap text-[12px] font-semibold text-zinc-700/30 dark:text-zinc-200/25">
-        {prettifyNumber(count, true)}
+        {prettifyNumber(count, false)}
       </span>
     </motion.button>
   )

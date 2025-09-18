@@ -64,7 +64,7 @@ export function ArticleCard({ post, views }: { post: Post; views: number }) {
           <span className="inline-flex items-center space-x-3 text-[12px] font-medium text-[--post-image-fg] md:text-xs">
             <span className="inline-flex items-center space-x-1">
               <CursorClickIcon />
-              <span>{prettifyNumber(views, true)}</span>
+              <span>{prettifyNumber(views, false)}</span>
             </span>
 
             <span className="inline-flex items-center space-x-1">

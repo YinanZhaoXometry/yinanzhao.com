@@ -1,6 +1,6 @@
 import { kvKeys } from '~/config/kv'
 import { env } from '~/env.mjs'
-import { redis } from '~/lib/redis'
+// import { redis } from '~/lib/redis'
 import { fetchLatestBlogPosts } from '~/sanity/queries'
 
 import { ArticleCard } from './ArticleCard'
@@ -14,7 +14,7 @@ export async function Articles({ limit = 5 }) {
     views = posts.map(() => Math.floor(Math.random() * 1000))
   } else {
     if (postIdKeys.length > 0) {
-      views = await redis.mget<number[]>(...postIdKeys)
+      // views = await redis.mget<number[]>(...postIdKeys)
     }
   }
 
